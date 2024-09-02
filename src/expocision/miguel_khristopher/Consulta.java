@@ -55,6 +55,7 @@ public class Consulta {
         this.comentario = comentario;
         
     }
+    // Para imprimir los datos de la consulta
     public void InformacionConsulta() {
         System.out.println("Informacion sobre la consulta:");
         System.out.println("Fecha de la consulta: " + fecha);
@@ -62,5 +63,9 @@ public class Consulta {
         System.out.println("Costo: " + costo);
         System.out.println("Nombre de quien lo va a atender: " + veterinario);
         System.out.println("Tu experiencia sobre la consulta: " + comentario);
+    }
+    // Para generar el menu del costo del tipo de consulta
+    public void menucosto(){
+        
     }
 }

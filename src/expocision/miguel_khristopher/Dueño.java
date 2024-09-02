@@ -21,7 +21,7 @@ public class Dueño {
         this.id = id;
         this.edad =edad;
     }
-     public String getNombre() {
+    public String getNombre() {
         return nombre;
     }
     public void setNombre(String nombre) {
