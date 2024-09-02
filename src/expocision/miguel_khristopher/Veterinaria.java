@@ -62,15 +62,15 @@ public class Veterinaria {
     public void setValoracion(String valoracion) {
         this.valoracion = valoracion;
     }
-    //metodo para 
-    //metodo para mostrar la informacion desde el main
-    public void Informacion() {
-        System.out.println("Informacion de la Clinica Veterinaria:");
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Direccion: " + direccion);
-        System.out.println("Telefono: " + telefono);
-        System.out.println("Horario: " + horario);
-        System.out.println("Valoracion (Estrellas): " + valoracion);
+     public String toString() {
+        return "Dueño{"+
+               "Nombre='" + nombre+ '\'' +
+               ", Direccion='" + direccion + '\'' +
+               ", Telefono='" + telefono + '\'' +
+               ", Horario=" + horario +
+               ", Valoracion=" + valoracion + 
+               '}';
+                
     }
 
 }

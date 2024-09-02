@@ -46,17 +46,22 @@ public class ExpocisionMiguel_Khristopher {
         String identidad = lea.next();
         System.out.println("Ingrese su edad: ");
         int edad = lea.nextInt();
-        
-        // Menú de selección de motivo de consulta con su costo
+        System.out.println("");
+        Dueño dueno = new Dueño( nombre,numero, correo, identidad, edad);
+        System.out.println("Ingrese la informacion sobre la cita:");
+        lea.nextLine();
+        System.out.println("Ingrese la fecha en la que quieres la cita: ");
+        String fecha = lea.nextLine();
+         // Menú de selección de motivo de consulta con su costo
         System.out.println("-------Motivo de la consulta y su costo------");
         System.out.println("1) Vacunación - 300 Lempiras");
         System.out.println("2) Baño - 500 Lempiras");
         System.out.println("3) Desparasitación - 700 Lempiras");
         System.out.println("4) Chequeo - 1000 Lempiras");
-        int seleccion = lea.nextInt();
+        System.out.println("Que desea hacer con su mascota: ");
+        int seleccion = lea.nextInt(); 
         String motivo = "";
         int costo = 0;
-
         switch (seleccion) {
             case 1:
                 motivo = "Vacunación";
@@ -75,7 +80,44 @@ public class ExpocisionMiguel_Khristopher {
                 costo = 1000;
                 break;
         }
+        lea.nextLine();
+        System.out.println("A que horas quiere su cita: ");
+        String hora = lea.nextLine();
+        Consulta consulta = new Consulta(fecha, motivo, costo, "Dr. Juan Pérez", hora);
+        int seleccion2;
+        do{
+            System.out.println("<-----Servicios Disponibles----->");
+            System.out.println("1) Ver informacion personal");
+            System.out.println("2) Ver informacion de la mascota");
+            System.out.println("3) Ver informacion de la cita");
+            System.out.println("4) Ver informacion de la veterinaria ");
+            System.out.println("5) Salir");
+            System.out.println("Que desea hacer: ");
+            seleccion2 = lea.nextInt();
+            switch(seleccion2){
+                case 1:
+                    System.out.println(dueno.toString());
+                    break;
+                case 2:
+                    System.out.println(mascota.toString());
+                    break;
+                case 3:
+                    System.out.println(consulta.toString());
+                    break;
+                case 4:
+                    System.out.println(veterinaria.toString());
+                    break;
+                case 5:
+                    System.out.println("Gracias por visitarnos vuelva pronto");
+                    break;
+                default:
+                    System.out.println("Opcion invalida");
+                    break;
+            }                  
+        }while(seleccion2 !=5);
+        
         
     } 
 }
+
 

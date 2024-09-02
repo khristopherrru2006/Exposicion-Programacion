@@ -12,14 +12,14 @@ public class Dueño {
     private String nombre;
     private String telefono;
     private String correo;
+    private String identidad;
     private int edad;
-    private String id;
-    public Dueño(String nombre, String telefono, String correo, int edad, String id) {
+    public Dueño(String nombre, String telefono, String correo, String identidad, int edad) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;
         this.edad = edad;
-        this.id = id;
+        this.identidad = identidad;
     }
     public String getNombre() {
         return nombre;
@@ -46,17 +46,19 @@ public class Dueño {
         this.correo = correo;
     }
      public String getId() {
-        return id;
+        return identidad;
     }
     public void setId(String id) {
-        this.id = id;
+        this.identidad = id;
     } 
-     public void InformacionDueno() {
-        System.out.println("Informacion del dueño:");
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Correo: " + correo);
-        System.out.println("Telefono: " + telefono);
-        System.out.println("Numero de identidad: " + id);
-        System.out.println("Edad: " + edad);
+     public String toString() {
+        return "Dueño{"+
+               "Nombre='" + nombre+ '\'' +
+               ", Edad='" + edad + '\'' +
+               ", Telefono='" + telefono + '\'' +
+               ", Correo=" + correo +
+               ", Id=" + identidad + 
+               '}';
+                
     }
 }

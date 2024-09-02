@@ -63,12 +63,12 @@ public class Mascota {
     @Override
     public String toString() {
         return "Mascota{" +
-                "Especie='" + mascota+ '\'' +
-                ", Raza='" + raza + '\'' +
-                ", Nombre='" + nombre + '\'' +
-                ", Edad=" + edad + " años" +
-                ", Peso=" + peso + " kg" +
-                '}';
+               "Especie='" + mascota+ '\'' +
+               ", Raza='" + raza + '\'' +
+               ", Nombre='" + nombre + '\'' +
+               ", Edad=" + edad + " años" +
+               ", Peso=" + peso + " kg" +
+               '}';
     }
 
 }

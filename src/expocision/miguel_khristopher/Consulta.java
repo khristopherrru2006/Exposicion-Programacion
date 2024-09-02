@@ -13,13 +13,13 @@ public class Consulta {
     private String motivo; 
     private int costo;
     private String veterinario;
-    private String comentario;
+    private String hora;
     public Consulta(String fecha, String motivo, int costo, String veterinario, String comentario) {
         this.fecha = fecha;
         this.motivo = motivo;
         this.costo = costo;
         this.veterinario = veterinario;
-        this.comentario = comentario;
+        this.hora = comentario;
     }
 
     public String getFecha() {
@@ -54,21 +54,23 @@ public class Consulta {
         this.veterinario = veterinario;
     }
 
-    public String getComentario() {
-        return comentario;
+    public String getHora() {
+        return hora;
     }
 
-    public void setComentario(String comentario) {
-        this.comentario = comentario;
+    public void setHora(String hora) {
+        this.hora = hora;
         
     }
     // Para imprimir los datos de la consulta
-    public void InformacionConsulta() {
-        System.out.println("Informacion sobre la consulta:");
-        System.out.println("Fecha de la consulta: " + fecha);
-        System.out.println("Motivo de la consulta: " + motivo);
-        System.out.println("Costo: " + costo);
-        System.out.println("Nombre de quien lo va a atender: " + veterinario);
-        System.out.println("Tu experiencia sobre la consulta: " + comentario);
+    public String toString() {
+        return "Dueño{"+
+               "Fecha='" + fecha+ '\'' +
+               ", Motivo='" + motivo + '\'' +
+               ", Costo='" + costo + '\'' +
+               ", Veterinario=" + veterinario +
+               ", Hora=" + hora + 
+               '}';
+                
     }
 }
