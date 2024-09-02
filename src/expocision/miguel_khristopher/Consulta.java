@@ -14,6 +14,13 @@ public class Consulta {
     private int costo;
     private String veterinario;
     private String comentario;
+    public Consulta(String fecha, String motivo, int costo, String veterinario, String comentario) {
+        this.fecha = fecha;
+        this.motivo = motivo;
+        this.costo = costo;
+        this.veterinario = veterinario;
+        this.comentario = comentario;
+    }
 
     public String getFecha() {
         return fecha;
@@ -63,9 +70,5 @@ public class Consulta {
         System.out.println("Costo: " + costo);
         System.out.println("Nombre de quien lo va a atender: " + veterinario);
         System.out.println("Tu experiencia sobre la consulta: " + comentario);
-    }
-    // Para generar el menu del costo del tipo de consulta
-    public void menucosto(){
-        
     }
 }

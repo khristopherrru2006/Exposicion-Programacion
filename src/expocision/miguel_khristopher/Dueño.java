@@ -14,12 +14,12 @@ public class Dueño {
     private String correo;
     private int edad;
     private String id;
-    public Dueño(String Dueño){
+    public Dueño(String nombre, String telefono, String correo, int edad, String id) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;
+        this.edad = edad;
         this.id = id;
-        this.edad =edad;
     }
     public String getNombre() {
         return nombre;
